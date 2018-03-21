@@ -1,0 +1,14 @@
+<p *ngIf="error">
+  {{error}}
+</p>
+
+<h1>Create a New Product</h1>
+
+<form (submit) = "onAdd()" class="postForm">
+  Title: <input type="text" name="newProduct.title" [(ngModel)] = "newProduct.title"/><br><br>
+  Price: <input type="text" name="newProduct.price" [(ngModel)] = "newProduct.price"/><br><br>
+  Image: <input type="url" name="newProduct.image" [(ngModel)] = "newProduct.image"/><br><br>
+  <input type="submit" value="Create" />
+</form>
+
+<button [routerLink]="['/products']">Cancel</button>

@@ -1,0 +1,13 @@
+
+<div *ngFor="let x of products" >
+
+    {{ x.title }}
+    {{ x.price }}
+    {{ x.image }}
+
+    
+
+<button [routerLink]="['../products/edit/:id']">EDIT</button>
+<form (submit) = "onDelete(x._id)" class="postForm">
+  <input type="submit" value="DELETE" />
+</form>

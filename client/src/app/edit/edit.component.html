@@ -1,0 +1,21 @@
+
+  <p *ngIf="error">
+      {{error}}
+    </p>
+    
+    
+    <form (submit) = "onEdit(Products)" class="postForm">
+      {{title}}
+      {{price}}
+      {{image}}
+      
+        
+        Title: <input type="text" name="titie" [(ngModel)] = "title" />
+        Price: <input type="text" name ="price" [(ngModel)] = "price"/> 
+        image: <input type="url" name = "image" [(ngModel)] = "image"/>
+    
+    
+      <input type="submit" value="Update" />
+  
+    </form>
+    <button [routerLink]="['/products']">Cancel</button>
